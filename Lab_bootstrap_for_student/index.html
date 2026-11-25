@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа на Tailwind CSS</title>
+
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+<!-- Панель навигации -->
+<header>
+    <nav class="flex flex-wrap items-center justify-between bg-emerald-100 border-b border-gray-200 px-4 py-3">
+
+        <!-- Логотип -->
+        <a class="text-xl font-semibold text-gray-800 hover:text-gray-600"
+           href="#">Топ высотных зданий</a>
+
+        <!-- Переключатель мобильного меню -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+        <!-- Кнопка-гамбургер -->
+        <label for="menu-toggle"
+               class="md:hidden block cursor-pointer p-2 text-gray-600 hover:text-gray-900 border border-gray-300 rounded">
+
+            <svg class="h-6 w-6"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+
+            </svg>
+        </label>
+
+        <!-- Меню -->
+        <div class="hidden peer-checked:block md:flex md:items-center md:justify-between w-full md:w-auto flex-grow">
+
+            <!-- Список ссылок -->
+            <ul class="flex md:flex-row md:space-x-6 md:space-y-0 md:ml-6 md:mb-0 mr-auto">
+
+                <li>
+                    <a class="text-gray-700 hover:text-blue-600"
+                       href="#">Главная</a>
+                </li>
+
+                <li>
+                    <a class="text-gray-700 hover:text-blue-600"
+                       href="#">Список зданий</a>
+                </li>
+
+                <li>
+                    <!-- Неактивная ссылка -->
+                    <a class="text-gray-400 pointer-events-none"
+                       href="#">Контакты</a>
+                </li>
+
+            </ul>
+
+            <!-- Форма поиска -->
+            <form class="flex space-x-2">
+
+                <!-- Поле ввода -->
+                <input class="md:w-48 px-3 py-1.5 border border-gray-300 rounded focus:outline-none focus:border-blue-500 text-sm"
+                       type="text"
+                       placeholder="Найти">
+
+                <!-- Кнопка -->
+                <button class="px-4 py-1.5 border border-green-600 text-green-600 rounded hover:bg-green-600 hover:text-white transition-colors text-sm">
+                    Найти
+                </button>
+
+            </form>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- Галерея -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 px-4">
+
+    <div>
+        <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+             src="images/image1.jpg" alt="">
+    </div>
+
+    <div>
+        <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+             src="images/image2.jpg" alt="">
+    </div>
+
+    <div>
+        <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+             src="images/image3.jpg" alt="">
+    </div>
+
+    <div>
+        <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+             src="images/image4.jpg" alt="">
+    </div>
+
+    <div>
+        <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+             src="images/image5.jpg" alt="">
+    </div>
+
+    <div>
+        <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+             src="images/image6.jpg" alt="">
+    </div>
+
+</div>
+
+<main class="max-w-7xl mx-auto px-4">
+
+    
+
+</main>
+
+</body>
+</html>
